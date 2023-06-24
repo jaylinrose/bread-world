@@ -1,3 +1,20 @@
+
+
+
+// schema
+const breadSchema = new Schema({
+  name: { type: String, required: true },
+  hasGluten: Boolean,
+  image: { type: String, default: 'http://placehold.it/500x500.png' },
+  baker: {
+    type: Schema.Types.ObjectID,
+    ref: 'Baker'
+  }
+})
+
+
+
+
 module.exports = [
     {
       name: 'Rye',
